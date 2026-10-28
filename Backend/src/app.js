@@ -1,13 +1,12 @@
 const express = require("express")
-const cookieParser = require("cookie-parser")
-const cors = require("cors")
 
-const app = express()
-
-app.use(express.json())
-app.use(cookieParser())
-
+const cookieParser = require("cookie-parser");
 const cors = require("cors");
+
+const app = express();
+
+app.use(express.json());
+app.use(cookieParser());
 
 app.use(cors({
   origin: [
@@ -16,6 +15,9 @@ app.use(cors({
   ],
   credentials: true
 }));
+
+/* Keep your existing routes below this */
+
 
 
 /* require all the routes here */
